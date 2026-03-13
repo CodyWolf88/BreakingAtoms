@@ -4,7 +4,7 @@ using UnityEngine.EventSystems; // Required for mouse interactions
 public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Settings")]
-    public float hoverScale = 1.1f; // How much bigger it gets (1.1 = 10% bigger)
+    public float hoverScale = 1.2f; // How much bigger it gets (1.1 = 10% bigger)
 
     private Vector3 originalScale;
 
