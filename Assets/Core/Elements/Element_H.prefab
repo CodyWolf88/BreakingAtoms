@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: elementName
       value: Hydrogen
       objectReference: {fileID: 0}
+    - target: {fileID: 702090769234570046, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: elementSymbol
+      value: H
+      objectReference: {fileID: 0}
     - target: {fileID: 3137503014229728303, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: m_Name
       value: Element_H
