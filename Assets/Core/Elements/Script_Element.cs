@@ -62,6 +62,8 @@ public class Script_Element : MonoBehaviour
         isDragging = false;
         rigidBody.bodyType = RigidbodyType2D.Dynamic;
     }
+    
+    
 
     // Update is called once per frame
     void Update()

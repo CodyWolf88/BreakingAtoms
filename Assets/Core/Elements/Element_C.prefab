@@ -10,35 +10,83 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 702090769234570046, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: state
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 702090769234570046, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: density
-      value: 3.21
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 702090769234570046, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: elementName
-      value: Chlorine
+      value: Carbon
       objectReference: {fileID: 0}
     - target: {fileID: 702090769234570046, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: elementSymbol
-      value: H
+      value: C
       objectReference: {fileID: 0}
     - target: {fileID: 1128621545487683621, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1376643990788403380, guid: 609d7414146ea9542825f7f619b853ce, type: 3}
+    - target: {fileID: 1128621545487683621, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.16981131
       objectReference: {fileID: 0}
     - target: {fileID: 1128621545487683621, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: m_Color.g
-      value: 0.4867924
+      value: 0.16981131
       objectReference: {fileID: 0}
     - target: {fileID: 1128621545487683621, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: m_Color.r
-      value: 0.062996745
+      value: 0.16981131
       objectReference: {fileID: 0}
     - target: {fileID: 3137503014229728303, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: m_Name
-      value: Element_Cl
+      value: Element_C
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_Size.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.54838705
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: -0.14285715
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3499846161357323333, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088346827547211083, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4088346827547211083, guid: c07119151e86ef042a41da5130af8041, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4088346827547211083, guid: c07119151e86ef042a41da5130af8041, type: 3}
       propertyPath: m_LocalPosition.x
