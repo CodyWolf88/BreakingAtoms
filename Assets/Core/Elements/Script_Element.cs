@@ -11,7 +11,6 @@ public enum StateOfMatter
 public class Script_Element : MonoBehaviour
 {
     
-    
     public string elementName = "";
     public StateOfMatter state =  StateOfMatter.Solid;
     
@@ -34,24 +33,24 @@ public class Script_Element : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         rigidBody.bodyType = RigidbodyType2D.Kinematic;
         rigidBody.linearVelocity = Vector2.zero;
 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         offset = new Vector2(transform.position.x, transform.position.y) - new Vector2(mousePos.x, mousePos.y);
-        Debug.Log("OnMouseEnter");
         isDragging = true;
     }
 
-    private void OnMouseDrag()
+    void OnMouseDrag()
     {
         if (isDragging)
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector2(transform.position.x, transform.position.y) + offset;
-        } 
+            transform.position = mousePos + offset;
+        }
+
     }
 
     private void OnMouseUp()
