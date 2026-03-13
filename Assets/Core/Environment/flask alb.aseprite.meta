@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 481064cd4d291f54b8c41532dd342c14
+guid: 9ecf78418893b7646bd3ed5af2eb0c81
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Balon alb
+  - name: flask alb
     originalName: 
-    pivot: {x: 0.47058824, y: -0.08}
+    pivot: {x: 0.923077, y: -0.62068963}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 17
-      height: 25
-    spriteID: 4d5e993a49840f548ae381598c452926
+      width: 13
+      height: 29
+    spriteID: 1a8b66bbdfb30544c93f5a4f72bafc0a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1430406185
+      value0: 1626888696
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Balon alb
+    name: flask alb
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Balon alb
+    - name: flask alb
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 2
-        width: 17
-        height: 25
-      spriteId: 4d5e993a49840f548ae381598c452926
+        x: 20
+        y: 18
+        width: 13
+        height: 29
+      spriteId: 1a8b66bbdfb30544c93f5a4f72bafc0a
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 32, y: 32}
+  canvasSize: {x: 64, y: 64}
   previousTextureSize: {x: 32, y: 64}
