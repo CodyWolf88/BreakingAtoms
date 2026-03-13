@@ -12,6 +12,7 @@ public class Script_Element : MonoBehaviour
 {
     
     public string elementName = "";
+    public string elementSymbol = "";
     public StateOfMatter state =  StateOfMatter.Solid;
     
     private Rigidbody2D rigidBody;
@@ -36,8 +37,7 @@ public class Script_Element : MonoBehaviour
     void OnMouseDown()
     {
         rigidBody.bodyType = RigidbodyType2D.Kinematic;
-        rigidBody.linearVelocity = Vector2.zero;
-
+        
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         offset = new Vector2(transform.position.x, transform.position.y) - new Vector2(mousePos.x, mousePos.y);
         isDragging = true;
