@@ -10,7 +10,7 @@ public class MainMenuController : MonoBehaviour
     
     [Header("Settings")]
     public float loadDelay = 0.5f; // Delay in seconds before loading scene
-    public string gameSceneName = "Game"; // Name of your game scene
+    public string gameSceneName = "Test"; // Name of your game scene
 
     // Function for the Play Button
     public void PlayGame()
