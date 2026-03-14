@@ -188,41 +188,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1dbf0a6a58345478323cd5a350fe73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  elementsText: {fileID: 0}
   allRecipes:
   - recipeName: Table Salt
     requiredSymbols:
     - Na
     - Cl
+    reactionCondition: 0
   - recipeName: Water
     requiredSymbols:
     - H
     - H
     - O
+    reactionCondition: 1
   - recipeName: Carbon dioxide
     requiredSymbols:
     - C
     - O
     - O
-  - recipeName: Metane
+    reactionCondition: 1
+  - recipeName: Methane
     requiredSymbols:
     - C
     - H
     - H
     - H
     - H
+    reactionCondition: 1
   - recipeName: ' Hydrochloric acid'
     requiredSymbols:
     - H
     - Cl
+    reactionCondition: 3
   - recipeName: Hydrogen peroxide
     requiredSymbols:
     - H
     - H
     - O
     - O
+    reactionCondition: 2
   - recipeName: ' Sodium hydroxide'
     requiredSymbols:
     - Na
     - O
     - H
+    reactionCondition: 0
   elementsInFlask: []
+  currentCondition: 0

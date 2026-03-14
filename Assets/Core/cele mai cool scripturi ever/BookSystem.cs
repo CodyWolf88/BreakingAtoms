@@ -71,6 +71,7 @@ public class BookSystem : MonoBehaviour
             nextButton.gameObject.SetActive(true);
             previousButton.gameObject.SetActive(true);
         }
+        
     }
 
     void PlayRandomSound()

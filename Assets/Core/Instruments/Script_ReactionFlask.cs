@@ -41,7 +41,7 @@ public class Script_ReactionFlask : MonoBehaviour
         elementsInFlask.Clear();
         elementsText.text = "";
     }
-    private void CheckReactionFlask()
+    private bool CheckReactionFlask()
     {
         elementsInFlask.Sort();
         string currentSignature = string.Join(",", elementsInFlask);
@@ -59,14 +59,46 @@ public class Script_ReactionFlask : MonoBehaviour
                 //elementsInFlask.Clear();
                 
                 Debug.Log(recipe.recipeName);
-                return;
+                return true;
             }
         }
+        
+        return false;
     }
+
+    public void ActivateHeatReaction()
+    {
+        currentCondition = ReactionCondition.Heat;
+        if (CheckReactionFlask())
+        {
+            RemoveAllElements();
+        }
+    }
+    
+    public void ActivateColdReaction()
+    {
+        currentCondition = ReactionCondition.Cold;
+        if (CheckReactionFlask())
+        {
+            RemoveAllElements();
+        }
+    }
+    
+    public void ActivateElectricityReaction()
+    {
+        currentCondition = ReactionCondition.Electricity;
+        if (CheckReactionFlask())
+        {
+            RemoveAllElements();
+        }
+    }
+    
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         Script_Element element = other.GetComponent<Script_Element>();
 
+        currentCondition = ReactionCondition.Normal;
         if (element != null)
         {
             elementsInFlask.Add(element.elementSymbol);
