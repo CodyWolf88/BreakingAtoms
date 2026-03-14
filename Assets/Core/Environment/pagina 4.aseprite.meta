@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2b703ade3d7cf574da59dc97a5d827b2
+guid: a2fa0d045229fc84c930df49aa10e23b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: pagina 2 si 3
+  - name: pagina 4
     originalName: 
-    pivot: {x: 0.51841086, y: -0.014285715}
+    pivot: {x: 0.5261628, y: -0.057142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -139,7 +139,7 @@ ScriptedImporter:
       y: 4
       width: 516
       height: 420
-    spriteID: 47f8f690de834d449966c4b47190918b
+    spriteID: ea0eb71490fbff142ae6eb2b57e873d4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 2031694663
+      value0: 4140398612
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: pagina 2 si 3
+    name: pagina 4
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: pagina 2 si 3
+    - name: pagina 4
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 8
-        y: 6
+        x: 5
+        y: 24
         width: 516
         height: 420
-      spriteId: 47f8f690de834d449966c4b47190918b
+      spriteId: ea0eb71490fbff142ae6eb2b57e873d4
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 551, y: 432}
+  canvasSize: {x: 553, y: 451}
   previousTextureSize: {x: 1024, y: 512}

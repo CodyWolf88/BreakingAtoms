@@ -208,7 +208,7 @@ MonoBehaviour:
     - C
     - O
     - O
-    formula: 
+    formula: CO<sub>2</sub>
     reactionCondition: 1
   - recipeName: Methane
     requiredSymbols:
@@ -217,13 +217,13 @@ MonoBehaviour:
     - H
     - H
     - H
-    formula: 
+    formula: CH<sub>4</sub>
     reactionCondition: 1
   - recipeName: ' Hydrochloric acid'
     requiredSymbols:
     - H
     - Cl
-    formula: 
+    formula: HCl
     reactionCondition: 3
   - recipeName: Hydrogen peroxide
     requiredSymbols:
@@ -231,14 +231,14 @@ MonoBehaviour:
     - H
     - O
     - O
-    formula: 
+    formula: H<sub>2</sub>O<sub>2</sub>
     reactionCondition: 2
   - recipeName: ' Sodium hydroxide'
     requiredSymbols:
     - Na
     - O
     - H
-    formula: 
+    formula: NaOH
     reactionCondition: 0
   elementsInFlask: []
   currentCondition: 0
