@@ -1,101 +1,76 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance { get; private set; }
 
     [Header("Audio Clips")]
-    public AudioClip introClip;      // Plays once
-    public AudioClip loopClip;       // Plays on loop after intro
+    public AudioClip introClip;
+    public AudioClip loopClip;
 
-    [Header("Settings")]
-    public bool playIntroOnStart = true;
-
-    private AudioSource audioSource;
-    private bool isIntroPlaying = false;
+    [Header("Audio Sources (Assign 2 in Inspector)")]
+    public AudioSource introSource;
+    public AudioSource loopSource;
 
     void Awake()
     {
-        // Singleton pattern with duplicate check
+        // Singleton & DontDestroyOnLoad Logic
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
 
-        // Setup AudioSource
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-            audioSource = gameObject.AddComponent<AudioSource>();
+        // Setup Sources if not assigned manually
+        if (introSource == null) introSource = gameObject.AddComponent<AudioSource>();
+        if (loopSource == null) loopSource = gameObject.AddComponent<AudioSource>();
 
-        audioSource.playOnAwake = false; // We'll control playback manually
+        // Configure Sources
+        introSource.playOnAwake = false;
+        loopSource.playOnAwake = false;
+        loopSource.loop = true; // The second clip loops
 
-        // Start playback
-        if (playIntroOnStart && introClip != null)
-        {
-            PlayIntro();
-        }
-        else if (loopClip != null)
-        {
-            PlayLoop();
-        }
+        // Start the sequence
+        PlayMusicSequence();
     }
 
-    public void PlayIntro()
+    public void PlayMusicSequence()
     {
-        if (introClip == null)
-        {
-            Debug.LogWarning("Intro clip not assigned!");
-            return;
-        }
+        if (introClip == null || loopClip == null) return;
 
-        isIntroPlaying = true;
-        audioSource.clip = introClip;
-        audioSource.loop = false;
-        audioSource.Play();
+        // 1. Get the current precise audio time
+        double startTime = AudioSettings.dspTime;
 
-        // Start coroutine to switch to loop clip after intro ends
-        StartCoroutine(SwitchToLoopAfterIntro());
+        // 2. Setup Intro
+        introSource.clip = introClip;
+        introSource.volume = 1f;
+        // Play the intro immediately
+        introSource.PlayScheduled(startTime);
+
+        // 3. Setup Loop
+        loopSource.clip = loopClip;
+        loopSource.volume = 1f;
+        // Schedule the loop to start EXACTLY when the intro ends
+        double loopStartTime = startTime + introClip.length;
+        loopSource.PlayScheduled(loopStartTime);
+        
+        // Optional: Stop intro source completely after it finishes to save resources
+        // (Though PlayScheduled only plays once, this ensures it's reset)
+        Invoke(nameof(StopIntroSource), (float)introClip.length + 0.1f);
     }
 
-    private System.Collections.IEnumerator SwitchToLoopAfterIntro()
+    void StopIntroSource()
     {
-        // Wait for intro clip to finish
-        yield return new WaitForSeconds(introClip.length);
-
-        // Switch to loop clip
-        PlayLoop();
+        introSource.Stop();
     }
 
-    public void PlayLoop()
-    {
-        if (loopClip == null)
-        {
-            Debug.LogWarning("Loop clip not assigned!");
-            return;
-        }
-
-        isIntroPlaying = false;
-        audioSource.clip = loopClip;
-        audioSource.loop = true;
-
-        // Only play if not already playing the loop clip
-        if (audioSource.clip != loopClip || !audioSource.isPlaying)
-        {
-            audioSource.Play();
-        }
-    }
-
-    // Optional: Call this if you want to restart intro (e.g., returning to main menu)
+    // Call this if you need to restart music (e.g. returning to menu)
     public void RestartMusic()
     {
-        StopAllCoroutines();
-        PlayIntro();
+        loopSource.Stop();
+        introSource.Stop();
+        PlayMusicSequence();
     }
 }
