@@ -1,45 +1,42 @@
-using UnityEngine.UI;  
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections; // Required for Coroutines (delays)
+using UnityEngine.UI;        // ← Required for Button class
+using System.Collections;
 
-public class MainMenuController : MonoBehaviour
+public class MainMenuController : MonoBehaviour  // ← Class name must match file name!
 {
     [Header("Audio")]
-    public AudioSource buttonSound; // Drag your AudioSource here in Inspector
+    public AudioSource buttonSound;
     
     [Header("Settings")]
-    public float loadDelay = 0.5f; // Delay in seconds before loading scene
-    public string gameSceneName = "Test"; // Name of your game scene
+    public float loadDelay = 1f;
+    public string gameSceneName = "Game";
 
-    // Function for the Play Button
+    // ✅ Must be 'public' to appear in Button OnClick
     public void PlayGame()
     {
-        // 1️⃣ Play the button sound
         if (buttonSound != null)
         {
             buttonSound.Play();
         }
 
-        // 2️⃣ Start the delayed scene load
         StartCoroutine(LoadSceneAfterDelay());
     }
 
-    // Coroutine: waits, then loads the scene
     private IEnumerator LoadSceneAfterDelay()
     {
-        // Optional: Disable the button so player can't click twice
         Button playButton = GetComponentInChildren<Button>();
-        if (playButton != null) playButton.interactable = false;
+        if (playButton != null) 
+        {
+            playButton.interactable = false;
+        }
 
-        // Wait for the delay time
         yield return new WaitForSeconds(loadDelay);
 
-        // Load the game scene
         SceneManager.LoadScene(gameSceneName);
     }
 
-    // Function for the Exit Button
+    // ✅ Must be 'public' to appear in Button OnClick
     public void QuitGame()
     {
         Debug.Log("Game Exited!");

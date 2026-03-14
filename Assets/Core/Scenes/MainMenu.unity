@@ -128,8 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 284920497}
-  - component: {fileID: 284920496}
   - component: {fileID: 284920498}
+  - component: {fileID: 284920499}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -137,21 +137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &284920496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284920495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d9cba4d29c28945b240f74857444ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
-  buttonSound: {fileID: 284920498}
-  loadDelay: 2.4
-  gameSceneName: Test
 --- !u!4 &284920497
 Transform:
   m_ObjectHideFlags: 0
@@ -264,6 +249,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &284920499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284920495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8024596ec8060a4eb3433d7e615115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
+  buttonSound: {fileID: 284920498}
+  loadDelay: 1
+  gameSceneName: Game
 --- !u!1 &526653090
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,13 +349,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 284920496}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 11500000, guid: b1d9cba4d29c28945b240f74857444ae, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -25827,13 +25827,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 284920496}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 11500000, guid: d8024596ec8060a4eb3433d7e615115b, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30748,17 +30748,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1945135868189932621, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.27168
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945135868189932621, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.27168
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945135868189932621, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.27168
+      objectReference: {fileID: 0}
     - target: {fileID: 2014444567983420666, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
       propertyPath: NoiseModule.quality
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4441700221430296742, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.2714
+      value: -19.4
       objectReference: {fileID: 0}
     - target: {fileID: 4441700221430296742, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01224
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: 4441700221430296742, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30795,6 +30807,34 @@ PrefabInstance:
     - target: {fileID: 4497954392769324399, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
       propertyPath: m_Name
       value: Particula Sistem Unitate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448961207319932814, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448961207319932814, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448961207319932814, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.050980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214618631859482698, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214618631859482698, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214618631859482698, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214618631859482698, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 7457476959132053902, guid: ddd837f0cd4f99e4a898f74a8ccd1d28, type: 3}
       propertyPath: m_LocalPosition.x
