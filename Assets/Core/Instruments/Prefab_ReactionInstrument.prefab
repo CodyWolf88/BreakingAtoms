@@ -193,4 +193,36 @@ MonoBehaviour:
     requiredSymbols:
     - Na
     - Cl
+  - recipeName: Water
+    requiredSymbols:
+    - H
+    - H
+    - O
+  - recipeName: Carbon dioxide
+    requiredSymbols:
+    - C
+    - O
+    - O
+  - recipeName: Metane
+    requiredSymbols:
+    - C
+    - H
+    - H
+    - H
+    - H
+  - recipeName: ' Hydrochloric acid'
+    requiredSymbols:
+    - H
+    - Cl
+  - recipeName: Hydrogen peroxide
+    requiredSymbols:
+    - H
+    - H
+    - O
+    - O
+  - recipeName: ' Sodium hydroxide'
+    requiredSymbols:
+    - Na
+    - O
+    - H
   elementsInFlask: []
