@@ -21,6 +21,8 @@ public class Script_ReactionFlask : MonoBehaviour
     {
         public string recipeName;
         public List<string> requiredSymbols;
+        
+        public string formula;
 
         public ReactionCondition reactionCondition = ReactionCondition.Normal;
     }
@@ -36,10 +38,13 @@ public class Script_ReactionFlask : MonoBehaviour
     
     public ReactionCondition currentCondition = ReactionCondition.Normal;
     
-    public void RemoveAllElements()
+    public void RemoveAllElements(bool resetText)
     {
         elementsInFlask.Clear();
-        elementsText.text = "";
+        if (resetText)
+        {
+            elementsText.text = "";
+        }
     }
     private bool CheckReactionFlask()
     {
@@ -56,8 +61,7 @@ public class Script_ReactionFlask : MonoBehaviour
 
             if (currentSignature == recipeSignature && currentCondition == recipe.reactionCondition)
             {
-                //elementsInFlask.Clear();
-                
+                elementsText.text = recipe.formula;
                 Debug.Log(recipe.recipeName);
                 return true;
             }
@@ -71,7 +75,7 @@ public class Script_ReactionFlask : MonoBehaviour
         currentCondition = ReactionCondition.Heat;
         if (CheckReactionFlask())
         {
-            RemoveAllElements();
+            RemoveAllElements(false);
         }
     }
     
@@ -80,7 +84,7 @@ public class Script_ReactionFlask : MonoBehaviour
         currentCondition = ReactionCondition.Cold;
         if (CheckReactionFlask())
         {
-            RemoveAllElements();
+            RemoveAllElements(false);
         }
     }
     
@@ -89,7 +93,7 @@ public class Script_ReactionFlask : MonoBehaviour
         currentCondition = ReactionCondition.Electricity;
         if (CheckReactionFlask())
         {
-            RemoveAllElements();
+            RemoveAllElements(false);
         }
     }
     
@@ -104,8 +108,11 @@ public class Script_ReactionFlask : MonoBehaviour
             elementsInFlask.Add(element.elementSymbol);
             
             Destroy(other.gameObject);
-            
-            CheckReactionFlask();
+
+            if (CheckReactionFlask())
+            {
+                RemoveAllElements(false);
+            }
             
         }
     }

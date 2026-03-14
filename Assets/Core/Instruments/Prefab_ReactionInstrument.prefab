@@ -194,18 +194,21 @@ MonoBehaviour:
     requiredSymbols:
     - Na
     - Cl
+    formula: NaCl
     reactionCondition: 0
   - recipeName: Water
     requiredSymbols:
     - H
     - H
     - O
+    formula: H<sub>2</sub>O
     reactionCondition: 1
   - recipeName: Carbon dioxide
     requiredSymbols:
     - C
     - O
     - O
+    formula: 
     reactionCondition: 1
   - recipeName: Methane
     requiredSymbols:
@@ -214,11 +217,13 @@ MonoBehaviour:
     - H
     - H
     - H
+    formula: 
     reactionCondition: 1
   - recipeName: ' Hydrochloric acid'
     requiredSymbols:
     - H
     - Cl
+    formula: 
     reactionCondition: 3
   - recipeName: Hydrogen peroxide
     requiredSymbols:
@@ -226,12 +231,14 @@ MonoBehaviour:
     - H
     - O
     - O
+    formula: 
     reactionCondition: 2
   - recipeName: ' Sodium hydroxide'
     requiredSymbols:
     - Na
     - O
     - H
+    formula: 
     reactionCondition: 0
   elementsInFlask: []
   currentCondition: 0
