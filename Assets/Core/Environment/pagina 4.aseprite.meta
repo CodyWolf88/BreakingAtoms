@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 98a83c9f1eced774692d694ff46dc498
+guid: a2fa0d045229fc84c930df49aa10e23b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: carte deschisa a vietii
+  - name: pagina 4
     originalName: 
-    pivot: {x: 0.57961786, y: -0.08571429}
+    pivot: {x: 0.5261628, y: -0.057142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 628
+      width: 516
       height: 420
-    spriteID: 75ca990e3de534549b2f5a9be1fc287f
+    spriteID: ea0eb71490fbff142ae6eb2b57e873d4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 4222286722
+      value0: 4140398612
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: carte deschisa a vietii
+    name: pagina 4
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: carte deschisa a vietii
+    - name: pagina 4
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 148
-        y: 36
-        width: 628
+        x: 5
+        y: 24
+        width: 516
         height: 420
-      spriteId: 75ca990e3de534549b2f5a9be1fc287f
+      spriteId: ea0eb71490fbff142ae6eb2b57e873d4
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 1024, y: 512}
+  canvasSize: {x: 553, y: 451}
   previousTextureSize: {x: 1024, y: 512}
