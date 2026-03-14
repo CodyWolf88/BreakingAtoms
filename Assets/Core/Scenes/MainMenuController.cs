@@ -10,7 +10,7 @@ public class MainMenuController : MonoBehaviour  // ← Class name must match fi
     
     [Header("Settings")]
     public float loadDelay = 1f;
-    public string gameSceneName = "Game";
+    public string gameSceneName = "Test";
 
     // ✅ Must be 'public' to appear in Button OnClick
     public void PlayGame()
