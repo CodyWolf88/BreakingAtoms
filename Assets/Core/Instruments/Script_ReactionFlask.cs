@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using TMPro;
+using UnityEngine.UI;
 
 public enum ReactionCondition
 {
@@ -34,12 +35,18 @@ public class Script_ReactionFlask : MonoBehaviour
     public List<string> elementsInFlask;
     
     public ReactionCondition currentCondition = ReactionCondition.Normal;
+    
+    public void RemoveAllElements()
+    {
+        elementsInFlask.Clear();
+        elementsText.text = "";
+    }
     private void CheckReactionFlask()
     {
         elementsInFlask.Sort();
         string currentSignature = string.Join(",", elementsInFlask);
         
-        string elementsIn_Text = string.Join("+", elementsInFlask);
+        string elementsIn_Text = string.Join(" + ", elementsInFlask);
         elementsText.text = elementsIn_Text;
 
         foreach (Recipe recipe in allRecipes)
@@ -71,14 +78,5 @@ public class Script_ReactionFlask : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

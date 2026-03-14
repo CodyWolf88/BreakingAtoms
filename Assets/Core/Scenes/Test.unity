@@ -780,6 +780,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8a79433f5b2e7c4b945cb712d39a193, type: 3}
+--- !u!114 &1167361217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3786151613011934361, guid: 0fae25503e410984685026d540d5d9c2, type: 3}
+  m_PrefabInstance: {fileID: 1998090202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1dbf0a6a58345478323cd5a350fe73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1257273675
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,8 +875,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1320,7 +1331,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1892534362}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167361217}
+        m_TargetAssemblyTypeName: Script_ReactionFlask, Assembly-CSharp
+        m_MethodName: RemoveAllElements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1892534362
 MonoBehaviour:
   m_ObjectHideFlags: 0
