@@ -425,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonParticleEffect
   particlePrefab: {fileID: 900398289}
+  spawnPoint: {fileID: 526653091}
 --- !u!1 &859713701
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +452,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859713701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -606,15 +607,15 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900398289}
   serializedVersion: 8
-  lengthInSec: 3.2
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
-  prewarm: 0
+  looping: 1
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -5388,8 +5389,8 @@ Transform:
   m_GameObject: {fileID: 900398289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 917, y: 252, z: -1.0000106}
-  m_LocalScale: {x: 0.45077157, y: 0.45077157, z: 0.45077157}
+  m_LocalPosition: {x: -186, y: -3, z: -1.0000106}
+  m_LocalScale: {x: 0.28582, y: 0.28582, z: 0.28582}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1847071999}
@@ -6150,6 +6151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonParticleEffect
   particlePrefab: {fileID: 900398289}
+  spawnPoint: {fileID: 2011206484}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
